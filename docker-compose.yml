@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  astra:
+    image: sonrac/cesbo-astra
+    privileged: true
+    volumes:
+      - ./license.txt:/etc/astra/license.txt
+    ports:
+      - 466:8000
+    build:
+      dockerfile: Dockerfile
+      context: .
